@@ -4,11 +4,12 @@ option go_package = "github.com/Odvin/go-commercial-proto/golang/order";
 message CreateOrderRequest {
   int64 user_id = 1;
   repeated Item items = 2;
-  float total_price = 3;
 }
 
 message Item {
-  string name = 1;
+  string product_code = 1;
+  float unit_price = 2;
+  int32 quantity = 3;
 }
 
 message CreateOrderResponse {
